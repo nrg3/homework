@@ -42,6 +42,16 @@ verbs_base = [
         }
     ]
 
+nouns_base = [
+    # 'Number' : 'Plural'
+    {'Ending' : 'ques', 'LemmaReplacement' : 'c'},
+    {'Ending' : 'es', 'LemmaReplacement' : ''},
+    {'Ending' : 's', 'LemmaReplacement' : ''},
+    {'Ending' : 'ec', 'LemmaReplacement' : ''},
+    #'Number' : 'Singular'
+    {'Ending' : 'c', 'LemmaReplacement' : ''}
+    ]
+
 def get_word_raw_descriptions (word):
 
     raw_descriptions = []
@@ -60,6 +70,18 @@ def get_word_raw_descriptions (word):
                                              'Details': description + ' ' + str(index)
                                             })
 
+    #here adjectives
+
+    # nouns
+
+    for suffix_data in nouns_base:
+        ending = suffix_data['Ending']
+        lemma_replacement = suffix_data['LemmaReplacement']
+        if is_suffix(word, ending):
+            raw_descriptions.append({'Original': replace_suffix(word, ending, lemma_replacement),
+                                         'Type': 'N',
+                                         'Details' : ' '
+                                    })
 
     return raw_descriptions
 
