@@ -12,6 +12,7 @@ def replace_suffix(word, suffix, new_suffix):
 verbs_base = [
         {'Suffix': 'ar', 'Rules': [['Indic. Pres. Ar', 'o', 'as', 'a', 'amos', 'áis', 'an'],
                                    ['Indic. Fut.  Ar', 'é', 'ás', 'á', 'emos', 'éis', 'án'],
+                                   ['Indic. Cond. Ar', 'ía', 'ías', 'ía', 'íamos', 'íais', 'ían'],
                                    ['Indic. Past  Ar', 'é', 'aste', 'ó', 'amos', 'asteis', 'aron'],
                                    ['Indic. Impf. Ar', 'aba', 'abas', 'aba', 'ábamos', 'abais', 'an'],
                                    ['Subj.  Pres. Ar', 'e', 'es', 'e', 'emos', 'éis', 'en'],
@@ -21,11 +22,22 @@ verbs_base = [
         },
         {'Suffix': 'er', 'Rules': [['Indic. Pres. Er', 'o', 'es', 'e', 'emos', 'éis', 'en'],
                                    ['Indic. Fut.  Er', 'é', 'ás', 'á', 'emos', 'éis', 'án'],
-                                   ['Indic. Past  Er', 'é', 'aste', 'ó', 'amos', 'asteis', 'aron'],
+                                   ['Indic. Cond. Er', 'ía', 'ías', 'ía', 'íamos', 'íais', 'ían'],
+                                   ['Indic. Past  Ir', 'í', 'iste', 'ió', 'imos', 'isteis', 'ieron'],
                                    ['Indic. Impf. Er', 'ía', 'ías', 'ía', 'íamos', 'íais', 'ían'],
                                    ['Subj.  Pres. Er', 'a', 'as', 'a', 'amos', 'áis', 'an'],
                                    ['Subj.  Past1 Er', 'iera', 'ieras', 'iera', 'iéramos', 'ierais', 'ieran'],
                                    ['Subj.  Past2 Er', 'iese', 'ieses', 'iese', 'iésemos', 'ieseis', 'iesen']
+                                   ]
+        },
+        {'Suffix': 'ir', 'Rules': [['Indic. Pres. Ir', 'o', 'es', 'e', 'imos', 'ís', 'en'],
+                                   ['Indic. Fut.  Ir', 'é', 'ás', 'á', 'emos', 'éis', 'án'],
+                                   ['Indic. Cond. Ir', 'ía', 'ías', 'ía', 'íamos', 'íais', 'ían'],
+                                   ['Indic. Past  Ir', 'í', 'iste', 'ió', 'imos', 'isteis', 'ieron'],
+                                   ['Indic. Impf. Ir', 'ía', 'ías', 'ía', 'íamos', 'íais', 'ían'],
+                                   ['Subj.  Pres. Ir', 'a', 'as', 'a', 'amos', 'áis', 'an'],
+                                   ['Subj.  Past1 Ir', 'iera', 'ieras', 'iera', 'iéramos', 'ierais', 'ieran'],
+                                   ['Subj.  Past2 Ir', 'iese', 'ieses', 'iese', 'iésemos', 'ieseis', 'iesen']
                                    ]
         }
     ]
