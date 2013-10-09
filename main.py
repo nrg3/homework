@@ -24,8 +24,8 @@ def get_train_score():
     os.remove('data\\temp.txt')
     return score
 
+
 def main():
-    #produce_output('data\\spanish.txt.test.clean.utf-8','data\\release.txt')
     print get_train_score()
 
 if __name__ == '__main__':
