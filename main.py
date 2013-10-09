@@ -12,7 +12,7 @@ def produce_output(input_path, output_path):
     inputer = codecs.open(input_path, "r", "utf-8")
     outputer = codecs.open(output_path, "w", "latin1")
     for word in inputer:
-        descriptions = get_word_descriptions(word)
+        descriptions = get_word_descriptions(word.rstrip('\r\n'))
         line = word.rstrip('\r\n')
         for description in descriptions:
             line = line + '\t' + get_converted_to_output_form(description)
@@ -24,8 +24,8 @@ def get_train_score():
     os.remove('data\\temp.txt')
     return score
 
-
 def main():
+    #produce_output('data\\spanish.txt.test.clean.utf-8','data\\release.txt')
     print get_train_score()
 
 if __name__ == '__main__':
